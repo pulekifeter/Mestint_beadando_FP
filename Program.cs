@@ -10,7 +10,7 @@ namespace Mestint_beadando_FP
         {
             int a;
             
-            Console.WriteLine(" 1- Mélységi \n 2- Szélességi \n 3-Backtrack");
+            Console.WriteLine(" 1- Mélységi \n 2- Szélességi \n 3- Backtrack \n 4-Optimális");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine("\n");
             
@@ -23,8 +23,7 @@ namespace Mestint_beadando_FP
                         foreach (var allapot in keres.Utvonal)
                         {
                             Console.WriteLine(allapot);
-                        }
-                        Console.WriteLine("asd");
+                        }                     
                         break;
                     case 2:
                         Kereso keres1 = new Szelessegi();
@@ -42,9 +41,17 @@ namespace Mestint_beadando_FP
                             Console.WriteLine(allapot);
                         }
                         break;
-                   
-                }
-            Console.WriteLine("asd");
+                case 4:
+                    Kereso keres3 = new Keresok.Optimalis();
+                    keres3.Keres();
+                    for (int i = 0; i < keres3.Utvonal.Count/2; i++)
+                    {
+                        Console.WriteLine(keres3.Utvonal[i]);
+                    }
+                    break;
+
+            }
+            
            
             
             
